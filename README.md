@@ -4,7 +4,9 @@ Multi-GPU CUDA stress test
 Origin: http://wili.cc/blog/gpu-burn.html
 
 # What is unique about this fork?
+The goal is to provide a stable and secure way to easily run gpu-burn on a Kubernetes cluster, hence:
 - Updated to lastest base image and cuda library (yeah, this could have been done with environment variables...)
+- Also including latest security fixes as updates in the Dockerfile.
 - Deployable to Kubernetes clusters such as OpenShift with the included `gpu-burn.yaml`.
 - For those that like it, the container behavior is easily tweakable with the newly added `entrypoint.sh`.
 - Switched from `Docker` to `podman`.
