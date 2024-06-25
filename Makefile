@@ -27,7 +27,7 @@ override LDFLAGS  += -lcublas
 override LDFLAGS  += -lcudart
 
 COMPUTE      ?= 50
-CUDA_VERSION ?= 11.8.0
+CUDA_VERSION ?= 12.2.0
 IMAGE_DISTRO ?= ubi8
 
 override NVCCFLAGS ?=
@@ -51,4 +51,4 @@ clean:
 	$(RM) *.ptx *.o gpu_burn
 
 image:
-	docker build --build-arg CUDA_VERSION=${CUDA_VERSION} --build-arg IMAGE_DISTRO=${IMAGE_DISTRO} -t ${IMAGE_NAME} .
+	podman build --build-arg CUDA_VERSION=${CUDA_VERSION} --build-arg IMAGE_DISTRO=${IMAGE_DISTRO} -t ${IMAGE_NAME} .
