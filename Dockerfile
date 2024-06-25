@@ -1,6 +1,6 @@
 # ARG CUDA_VERSION=11.7.0
 ARG CUDA_VERSION=12.5.0
-ARG IMAGE_DISTRO=ubi8
+ARG IMAGE_DISTRO=ubi8.10
 
 # FROM nvidia/cuda:${CUDA_VERSION}-devel-ubuntu20.04 AS builder
 FROM nvidia/cuda:${CUDA_VERSION}-devel-${IMAGE_DISTRO} AS builder
