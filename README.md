@@ -1,19 +1,14 @@
 # gpu-burn
+
 Multi-GPU CUDA stress test
-http://wili.cc/blog/gpu-burn.html
+Origin: http://wili.cc/blog/gpu-burn.html
 
-# Easy podman build and run
+# What is unique about this fork?
+- Updated to lastest base image and cuda library (yeah, this could have been done with environment variables...)
+- Deployable to Kubernetes clusters such as OpenShift with the included `gpu-burn.yaml`.
+- For those that like it, the container behavior is easily tweakable with the newly added `entrypoint.sh`.
+- Switched from `Docker` to `podman`.
 
-```
-git clone https://github.com/wilicc/gpu-burn
-cd gpu-burn
-podman build -t gpu_burn .
-podman run --rm --gpus all gpu_burn
-```
-
-# Binary packages
-
-https://repology.org/project/gpu-burn/versions
 
 # Building
 To build GPU Burn:
