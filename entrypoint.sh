@@ -1,7 +1,8 @@
 /usr/bin/sh
 
+RUNSECONDS=${RUNSECONDS:60}
 export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/cuda-12.5/compat
-echo
-./gpu_burn 900
+
+./gpu_burn ${RUNSECONDS}
 
 

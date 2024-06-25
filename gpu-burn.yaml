@@ -7,6 +7,9 @@ spec:
   containers:
   - name: gpu-burn
     image: "quay.io/trent_s/gpu-burn"
+    env:
+    - name: RUNSECONDS
+      value: 60
     resources:
       limits:
         nvidia.com/gpu: 1
