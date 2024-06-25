@@ -28,7 +28,7 @@ override LDFLAGS  += -lcudart
 
 COMPUTE      ?= 50
 CUDA_VERSION ?= 12.5.0
-IMAGE_DISTRO ?= ubi8.10
+IMAGE_DISTRO ?= ubi9
 
 override NVCCFLAGS ?=
 override NVCCFLAGS += -I${CUDAPATH}/include
