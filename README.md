@@ -1,4 +1,4 @@
-# gpu-burn
+# gpu-burn ![GitHub Workflow Status](https://quay.io/repository/trent_s/gpu-burn/status)
 
 Multi-GPU CUDA stress test
 Origin: http://wili.cc/blog/gpu-burn.html
