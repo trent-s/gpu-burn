@@ -10,7 +10,8 @@ The goal is to provide a stable and secure way to easily run gpu-burn on a Kuber
 - Deployable to Kubernetes clusters such as OpenShift with the included `gpu-burn.yaml`.
 - For those that like it, the container behavior is easily tweakable with the newly added `entrypoint.sh`.
 - Switched from `Docker` to `podman`.
-
+- And vitally, I provided new images with security fixes when necessary:
+  - quay.io/trent_s/gpu-burn
 
 # Building
 To build GPU Burn:
