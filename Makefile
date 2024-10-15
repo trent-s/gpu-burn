@@ -51,4 +51,4 @@ clean:
 	$(RM) *.ptx *.o gpu_burn
 
 image:
-	podman build --build-arg CUDA_VERSION=${CUDA_VERSION} --build-arg IMAGE_DISTRO=${IMAGE_DISTRO} -t ${IMAGE_NAME} .
+	podman build --squash-all --build-arg CUDA_VERSION=${CUDA_VERSION} --build-arg IMAGE_DISTRO=${IMAGE_DISTRO} -t ${IMAGE_NAME} .
