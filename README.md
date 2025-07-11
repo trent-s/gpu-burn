@@ -5,12 +5,12 @@ Origin: http://wili.cc/blog/gpu-burn.html
 
 # What is unique about this fork?
 The goal is to provide a stable and secure way to easily run gpu-burn on a Kubernetes cluster, hence:
-- Updated to lastest base image and cuda library (yeah, this could have been done with environment variables...)
-- Also including latest security fixes as updates in the Dockerfile.
+- Updated to recent stable base image and CUDA library (yeah, this could have been done with environment variables...)
+- Including latest security fixes as updates in the Dockerfile.
 - Deployable to Kubernetes clusters such as OpenShift with the included `gpu-burn.yaml`.
-- For those that like it, the container behavior is easily tweakable with the newly added `entrypoint.sh`.
-- Switched from `Docker` to `podman`.
-- And vitally, I provided new images with security fixes when necessary:
+- Container behavior is easily tweakable with the newly added `entrypoint.sh`.
+- Switched from `docker` to `podman`.
+- And vitally, new images with security fixes provided periodically:
   - quay.io/trent_s/gpu-burn
 
 # Building
@@ -43,7 +43,7 @@ list of nvcc flags:
 `make NVCCFLAGS=-ccbin <path to host compiler>`
 
 CUDAPATH can be added to point to a non standard install or
-specific version of the cuda toolkit (default is 
+specific version of the CUDA toolkit (default is 
 /usr/local/cuda):
 
 `make CUDAPATH=/usr/local/cuda-<version>`
@@ -57,7 +57,7 @@ CUDA_VERSION and IMAGE_DISTRO can be used to override the base
 images used when building the Docker `image` target, while IMAGE_NAME
 can be set to change the resulting image tag:
 
-`make IMAGE_NAME=myregistry.private.com/gpu-burn CUDA_VERSION=12.0.1 IMAGE_DISTRO=ubuntu22.04 image`
+`make IMAGE_NAME=myregistry.private.com/gpu-burn CUDA_VERSION=12.6.3 IMAGE_DISTRO=ubi9 image`
 
 # Usage
 

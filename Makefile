@@ -27,7 +27,7 @@ override LDFLAGS  += -lcublas
 override LDFLAGS  += -lcudart
 
 COMPUTE      ?= 50
-CUDA_VERSION ?= 12.6.1
+CUDA_VERSION ?= 12.6.3
 IMAGE_DISTRO ?= ubi9
 
 override NVCCFLAGS ?=
