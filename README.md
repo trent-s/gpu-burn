@@ -57,7 +57,7 @@ CUDA_VERSION and IMAGE_DISTRO can be used to override the base
 images used when building the Docker `image` target, while IMAGE_NAME
 can be set to change the resulting image tag:
 
-`make IMAGE_NAME=myregistry.private.com/gpu-burn CUDA_VERSION=12.8.1 IMAGE_DISTRO=ubi9 image`
+`make IMAGE_NAME=myregistry.private.com/gpu-burn CUDA_VERSION=12.9.1 IMAGE_DISTRO=ubi9 image`
 
 # Usage
 
